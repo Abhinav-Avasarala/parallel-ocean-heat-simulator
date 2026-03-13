@@ -2,7 +2,7 @@
 #BSUB -n 32
 #BSUB -W 20
 #BSUB -R "rusage[mem=2]"
-#BSUB -R "select[model==Plat8462]"
+#BSUB -R "select[model==Gold6130]"
 #BSUB -R "span[hosts=1]"
 #BSUB -o row.txt
 #BSUB -J proj1_row
