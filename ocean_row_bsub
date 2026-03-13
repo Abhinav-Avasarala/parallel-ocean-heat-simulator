@@ -1,0 +1,67 @@
+#!/bin/bash
+#BSUB -n 32
+#BSUB -W 20
+#BSUB -R "rusage[mem=2]"
+#BSUB -R "select[model==Gold6130]"
+#BSUB -R "span[hosts=1]"
+#BSUB -o row.txt
+#BSUB -J proj1_row
+
+set -e
+
+RAW_TIMES="row_times_raw.txt"
+
+gcc -O2 -fopenmp -o ocean_row ocean_row.c
+> "$RAW_TIMES"
+
+whoami
+lscpu
+
+for T in 1 2 4 8 16
+do
+    export OMP_NUM_THREADS="$T"
+    echo "******************************"
+    echo "---- $T threads ----"
+    echo "******************************"
+    for i in {1..10}
+    do
+        output=$(./ocean_row 1026 5000 grid1026_hotTop.txt /dev/null)
+        printf "%s\n" "$output"
+        printf "%s\n" "$output" | awk '/Time =/ {print $3}' >> "$RAW_TIMES"
+    done
+done
+
+python3 - <<'PY'
+import csv
+from pathlib import Path
+
+csv_path = Path("row_times.csv")
+raw_path = Path("row_times_raw.txt")
+thread_order = [1, 2, 4, 8, 16]
+raw_times = [float(line.strip()) for line in raw_path.read_text().splitlines() if line.strip()]
+
+if len(raw_times) != 50:
+    raise SystemExit(f"Expected 50 timings, found {len(raw_times)}")
+
+times = {}
+for idx, thread in enumerate(thread_order):
+    start = idx * 10
+    times[thread] = raw_times[start:start + 10]
+
+means = {thread: sum(values) / len(values) for thread, values in times.items()}
+baseline = means[1]
+speedups = {thread: baseline / means[thread] for thread in thread_order}
+
+with csv_path.open("w", newline="") as outfile:
+    writer = csv.writer(outfile)
+    writer.writerow(["RUN", "1 thread", "2 threads", "4 threads", "8 threads", "16 threads"])
+    for run_idx in range(10):
+        writer.writerow(
+            [run_idx + 1] + [f"{times[thread][run_idx]:.9f}" for thread in thread_order]
+        )
+    writer.writerow(["", "", "", "", "", ""])
+    writer.writerow(["MEAN"] + [f"{means[thread]:.2f}" for thread in thread_order])
+    writer.writerow(["SPEEDUP"] + [f"{speedups[thread]:.2f}" for thread in thread_order])
+PY
+
+rm -f "$RAW_TIMES"
