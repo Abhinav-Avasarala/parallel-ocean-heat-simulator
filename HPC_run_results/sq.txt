@@ -1,0 +1,238 @@
+aavasar
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Address sizes:                   46 bits physical, 48 bits virtual
+Byte Order:                      Little Endian
+CPU(s):                          32
+On-line CPU(s) list:             0-31
+Vendor ID:                       GenuineIntel
+Model name:                      Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+CPU family:                      6
+Model:                           85
+Thread(s) per core:              1
+Core(s) per socket:              16
+Socket(s):                       2
+Stepping:                        4
+BogoMIPS:                        4200.00
+Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp_epp pku ospke md_clear flush_l1d arch_capabilities
+L1d cache:                       1 MiB (32 instances)
+L1i cache:                       1 MiB (32 instances)
+L2 cache:                        32 MiB (32 instances)
+L3 cache:                        44 MiB (2 instances)
+NUMA node(s):                    2
+NUMA node0 CPU(s):               0-15
+NUMA node1 CPU(s):               16-31
+Vulnerability Itlb multihit:     KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:              Mitigation; PTE Inversion
+Vulnerability Mds:               Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Meltdown:          Mitigation; PTI
+Vulnerability Mmio stale data:   Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Retbleed:          Mitigation; IBRS
+Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:        Mitigation; IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS Not affected
+Vulnerability Srbds:             Not affected
+Vulnerability Tsx async abort:   Mitigation; Clear CPU buffers; SMT disabled
+******************************
+---- 1 threads ----
+******************************
+1026 x 1026 array, 5000 time steps
+Time = 8.338389604 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.445995157 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.419608242 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.422511932 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.444179907 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.448200097 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.420581997 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.422430972 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.436350335 seconds
+1026 x 1026 array, 5000 time steps
+Time = 8.419979703 seconds
+******************************
+---- 2 threads ----
+******************************
+1026 x 1026 array, 5000 time steps
+Time = 4.702816750 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.692284480 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.676123323 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.732588437 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.695390551 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.702093275 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.739351600 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.706499097 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.713079753 seconds
+1026 x 1026 array, 5000 time steps
+Time = 4.828826951 seconds
+******************************
+---- 4 threads ----
+******************************
+1026 x 1026 array, 5000 time steps
+Time = 3.703624746 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.721124565 seconds
+1026 x 1026 array, 5000 time steps
+Time = 3.403193674 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.723727268 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.727056107 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.707234890 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.733064077 seconds
+1026 x 1026 array, 5000 time steps
+Time = 3.474803919 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.678704937 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.677316177 seconds
+******************************
+---- 8 threads ----
+******************************
+1026 x 1026 array, 5000 time steps
+Time = 2.560394061 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.618799959 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.611146626 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.481817482 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.490398478 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.573667983 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.574490247 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.727768229 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.592987472 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.620521396 seconds
+******************************
+---- 16 threads ----
+******************************
+1026 x 1026 array, 5000 time steps
+Time = 1.995948902 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.000758146 seconds
+1026 x 1026 array, 5000 time steps
+Time = 1.846639338 seconds
+1026 x 1026 array, 5000 time steps
+Time = 1.993646099 seconds
+1026 x 1026 array, 5000 time steps
+Time = 1.897280595 seconds
+1026 x 1026 array, 5000 time steps
+Time = 1.870948962 seconds
+1026 x 1026 array, 5000 time steps
+Time = 1.994111041 seconds
+1026 x 1026 array, 5000 time steps
+Time = 1.986721133 seconds
+1026 x 1026 array, 5000 time steps
+Time = 2.031367742 seconds
+1026 x 1026 array, 5000 time steps
+Time = 1.849224743 seconds
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@c052n02>
+Subject: Job 444557: <proj1_sq> in cluster <Hazel> Done
+
+Job <proj1_sq> was submitted from host <login02.hpc.ncsu.edu> by user <aavasar> in cluster <Hazel> at Fri Mar 13 12:04:20 2026
+Job was executed on host(s) <32*c052n02>, in queue <short>, as user <aavasar> in cluster <Hazel> at Fri Mar 13 12:04:21 2026
+</home/aavasar> was used as the home directory.
+</share/ece506s26/aavasar/parallel-ocean-heat-simulator> was used as the working directory.
+Started at Fri Mar 13 12:04:21 2026
+Terminated at Fri Mar 13 12:08:11 2026
+Results reported at Fri Mar 13 12:08:11 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -n 32
+#BSUB -W 20
+#BSUB -R "rusage[mem=2]"
+#BSUB -R "select[model==Gold6130]"
+#BSUB -R "span[hosts=1]"
+#BSUB -o sq.txt
+#BSUB -J proj1_sq
+
+set -e
+
+RAW_TIMES="sq_times_raw.txt"
+
+gcc -O2 -fopenmp -o ocean_sq ocean_sq.c
+> "$RAW_TIMES"
+
+whoami
+lscpu
+
+for T in 1 2 4 8 16
+do
+    export OMP_NUM_THREADS="$T"
+    echo "******************************"
+    echo "---- $T threads ----"
+    echo "******************************"
+    for i in {1..10}
+    do
+        output=$(./ocean_sq 1026 5000 grid1026_hotTop.txt /dev/null)
+        printf "%s\n" "$output"
+        printf "%s\n" "$output" | awk '/Time =/ {print $3}' >> "$RAW_TIMES"
+    done
+done
+
+python3 - <<'PY'
+import csv
+from pathlib import Path
+
+csv_path = Path("sq_times.csv")
+raw_path = Path("sq_times_raw.txt")
+thread_order = [1, 2, 4, 8, 16]
+raw_times = [float(line.strip()) for line in raw_path.read_text().splitlines() if line.strip()]
+
+if len(raw_times) != 50:
+    raise SystemExit(f"Expected 50 timings, found {len(raw_times)}")
+
+times = {}
+for idx, thread in enumerate(thread_order):
+    start = idx * 10
+    times[thread] = raw_times[start:start + 10]
+
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   838.50 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     2.00 GB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                20
+    Run time :                                   235 sec.
+    Turnaround time :                            231 sec.
+
+The output (if any) is above this job summary.
+
